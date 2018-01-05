@@ -1,0 +1,94 @@
+{
+  "title": "gitbook tutorial",
+  "author" : "derek fan",
+  "description" : "记录Gitbook的配置和一些插件的使用",
+  "language" : "zh-hans",
+  "structure": {
+    "readme": "README.md"
+  },
+  "tbfed-pagefooter": {
+  "copyright":"derek fan",
+  "modify_label": "该文件修订时间：",
+  "modify_format": "YYYY-MM-DD HH:mm:ss"
+   },
+  "links": {
+    "sidebar" : {
+        "Home" : "http://cgo.cool"
+      },
+    "gitbook": false,
+    "sharing": {
+      "google": false,
+      "facebook": "facebook_derek",
+      "twitter": false,
+      "all": false
+    }
+  },
+"styles": {
+    "website": "styles/website.css",
+    "ebook": "styles/ebook.css",
+    "pdf": "styles/pdf.css",
+    "mobi": "styles/mobi.css",
+    "epub": "styles/epub.css"
+     },
+"plugins": [
+    "-fbqx",
+    "sectionx",
+    "splitter",
+    "github",
+    "anchors",
+    "chart",
+    "sitemap",
+    "latex-codecogs",
+    "book-summary-scroll-position-saver",
+    "-tbfed-pagefooter",
+    "-page-footer-ex",
+    "mermaid-gb3",
+    "ace",
+    "prism",
+    "-highlight",
+    "mcqx",
+    "spoiler"
+   ],
+"pluginsConfig": {
+    "page-footer-ex": {
+            "copyright": "[derek fan](https://github.com/fghosth)",
+            "markdown": true,
+            "update_label": "<i>updated</i>",
+            "update_format": "YYYY-MM-DD HH:mm:ss"
+        },
+    "prism": {
+       "css": [
+          "prismjs/themes/prism-coy.css"
+           ],
+       "ignore": [
+            "mermaid",
+            "eval-js"
+           ],
+       "lang": {
+          "flow": "typescript"
+           }
+        },
+    "github": {
+            "url": "https://github.com/your/repo"
+        },
+     "chart": {
+            "type": "highcharts"
+        },
+      "sitemap": {
+            "hostname": "http://mybook.com/"
+        }
+   },
+ "pdf": {
+    "pageNumbers": true, 
+    "fontFamily": "Arial",
+    "fontSize": 12,
+    "paperSize": "a4",
+    "margin": {
+      "right": 62,
+      "left": 62,
+      "top": 56,
+      "bottom": 56
+    }
+  }
+
+}
