@@ -1,27 +1,28 @@
 %!TEX root =  ../main.tex
 
 \begin{abstract}
-  摘要是论文内容的总结概括，应简要说明论文的研究目的、基本研究内容、 研究方法或
-  过程、结果和结论，突出论文的创新之处。摘要中不宜使用公式、图表，不引用文献。
-  博士论文中文摘要一般800～1000个汉字，硕士论文中文摘要一般600个汉字。英文摘要的
-  篇幅参照中文摘要。
-
-  关键词另起一行并隔写在摘要下方，一般3～8个词，中文关键词间空一字或用分号“；”隔
-  开。英文摘要的关键词与中文摘要的关键词应完全一致，中间用逗号“,”或分号“;”隔开。
-
-  \keywords{中国科学技术大学；学位论文；\LaTeX{} 模板；学士；硕士；博士}
+  电子邮件系统目前互联网上最普及的应用之一。然而，电子邮件在给人们提供便捷通信手段的同时，也遭到了一些人为的滥用。当今垃圾邮件问题已经愈演愈烈，对互联网造成了很大危害。利用技术方法来阻挡垃圾邮件，是目前为止对付垃圾邮件问题最有效的手段。各种过滤技术中，贝叶斯过滤技术，借鉴了在文本挖掘问题中获得成功的机器学习算法，是目前研究较多的一种过滤技术。贝叶斯过滤方法在分类的效果上以及在不需要太多人工干预上都有很大优势，因此逐渐被广泛接受。
+  
+    我们分析了目前的垃圾邮件内容过滤技术，认识到垃圾邮件过滤技术与普通的文本分类和挖掘问题存在着很多不同。我们总结和分析了目前基于贝叶斯垃圾邮件过滤技术的现状，包括文本表  示、特征选择、分类算法、评价体系，以及垃圾邮件过滤领域中常用的公共语料库，对基于贝叶斯的过滤方法提出了一系列改进。论文的具体内容包括：  
+     
+    （1）对朴素贝叶斯算法进行了详细的研究，并且提出了三个方面的改进思路。在文本表示方面，提出采用指纹特征的表示方法；在特征选择方面，提出了基于类条件分布的特征选择；第三个方面，根据学习的不断深入性，提出了阈值动态调整算法。基于这些改进，实现了改进的朴素贝叶斯过滤器。 
+    
+    （2）分析邮件结构特点，从邮件结构不同于普通文本出发，提出集成加权模型，以充分利用邮件的结构信息。基于集成加权模型对邮件头和邮件正文分别建立模型，最后通过加权方法集成二者结果，对垃圾邮件进行过滤。
+      
+    （3）研究了最小风险贝叶斯和主动学习贝叶斯两种贝叶斯的扩展模型。最小风险贝叶斯能够减少正常邮件判为垃圾邮件的风险，而主动学习贝叶斯主动训练样本集，能够降低样本顺序对过滤精度的影响。根据实验结果对比，得到两种扩展模型的最佳应用条件，并提出了改进后的邮件过滤算法。  综合以上改进和扩展而设计的贝叶斯过滤器在最新的标准数据集上的测试结果表明，与经典的贝叶斯过滤器Bogo相比，过滤效果有较大的提高。 
+  \keywords{集成加权贝叶斯；最小风险贝叶斯；主动学习贝叶斯；特征选择；阈值调整}
 \end{abstract}
 
 \begin{enabstract}
-  This is a sample document of USTC thesis \LaTeX{} template for bachelor,
-  master and doctor. The template is created by zepinglee and seisman, which
-  orignate from the template created by ywg. The template meets the
-  equirements of USTC theiss writing standards.
+  Electronic mail (e-mail) is a big success of Internet; it is becoming one of the fastest  and most economical ways of communication available. At the same time,the growing problem of junk mail (also refered to as “spam”) has generated a need for e-mail filtering. There have been a lot of methods to beat spam, and the approach of using automated text categorization and information filtering to filter spam is become a most efficient one. We analyzed the current technology of content-based spam filtering, and found lots of differences between the traditional text categorization Problem and the one of spam filtering. Depend on this analysis, develop some methods to improve the performance of the spam filtering algorithm.
+  
+  The contents of this article are as following:
+  
+  (1) A summary about the state of the content-based spam filtering. We investigating anti-spam problem from the text categorization perspective, introducing the approaches of feature selection, classifiers and e-mail corpus in this task. 
+  
+   (2) We study the bayes algorithm in details and propose the improvings in four aspects.The first aspect is the showing of text.We proposes a new method which is fingerprint feature. The second aspect is feature selecting. We propose a new method which is class condition distribute. The e-mail corpus and text corpus are very different in structure. We analyzed the structure of email, and purposed a email header and email body integrated model. In the fourth aspect, we propose threshold adjusting algorithm. In the end ,we combine four aspects, and realize the improving bayes percolator. 
+   
+    (3)  From the shortcomings of ordinary  bayes,Bayes proposed minimum risk  Bayes model and initiative studying  Bayes model. Minimum risk Bayes model reduced the risk to judge the normal mail as spam email And the initiative  studying  Bayes model can reduce  the impact of the order of corpus in the email filtering accuracy. 
 
-  This document will show the usage of basic commands provided by \LaTeX{} and
-  some features provided by the template. For more information, please refer to
-  the template document ustcthesis.pdf.
-
-  \enkeywords{University of Science and Technology of China (USTC); Thesis;
-  \LaTeX{} Template; Bachelor; Master; PhD}
+  \enkeywords{Minimum risk bayes ; Active learning bayes ; Integration weighted bayes ; Feature selection ;   Threshold adjustment}
 \end{enabstract}
