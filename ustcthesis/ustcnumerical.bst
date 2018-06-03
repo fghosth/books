@@ -5,7 +5,6 @@
 %% The original source files were:
 %%
 %% ustcthesis.dtx  (with options: `numerical')
-%% 
 %% Copyright (C) 2015-2018 by Zeping Lee <zepinglee AT gmail.com>
 %% 
 %% This file may be distributed and/or modified under the

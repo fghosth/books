@@ -5,7 +5,6 @@
 %% The original source files were:
 %%
 %% ustcthesis.dtx  (with options: `class')
-%% 
 %% Copyright (C) 2015-2018 by Zeping Lee <zepinglee AT gmail.com>
 %% 
 %% This file may be distributed and/or modified under the
@@ -251,6 +250,7 @@
     },
     section = {
         format     = \sffamily\setfontsize{14\bp@},
+        titleformat = \raggedright,
         aftername  = \hspace{\ccwd},
         beforeskip = 24\bp@,
         afterskip  = 6\bp@,
@@ -400,12 +400,12 @@
           \vpostext{16.3cm}{\sffamily\bfseries\setfontsize{24\bp@}\ustc@title}%
         \else
 
-          \vpostext{5.3cm}{\sffamily\setfontsize{23\bp@}\ustc@thesisname}%
+          \vpostext{5.4cm}{\sffamily\setfontsize{23\bp@}\ustc@thesisname}%
           %\vpostext{9.8cm}{\includegraphics[height=4.7cm]{figures/ustc_logo_fig}}%
-          \vpostext{10.3cm}{\sffamily\bfseries\setfontsize{22\bp@}[0\bp@]\ustc@title}%
+          \vpostext{10.0cm}{\sffamily\bfseries\setfontsize{22\bp@}[0\bp@]\ustc@title}%
         \fi
         \tikz[remember picture,overlay]%
-            \node [xshift=4.6cm,yshift=-13.3cm] at (current page.north west)%
+            \node [xshift=4.6cm,yshift=-12.3cm] at (current page.north west)%
             [below right,align=left] {%
                 \setfontsize{16\bp@}%
                 \begin{tabular}{@{}l@{\hspace{\ccwd}}l@{}}%
@@ -499,7 +499,7 @@
 }
 \newenvironment{abstract}{%
     \if@ustc@bachelor
-        \chapter{中文内容摘要}%
+        \chapter{摘要}%
     \else
         \ustc@chapter{摘要}%
     \fi
@@ -517,6 +517,7 @@
   \par\phantom{empty}\par\noindent\hangindent=5.3em\relax%
   \textbf{Key Words}: #1}
 \renewcommand\tableofcontents{%
+    \pagestyle{empty}
     \cleardoublepage%
     \if@ustc@bachelor\pagenumbering{arabic}\fi
     \ustc@chapter{\contentsname}%
@@ -537,7 +538,7 @@
     \titlecontents{subsection}
         [2\ccwd]
         {\setfontsize{12\bp@}[20\bp@]}
-        {\contentspush{\thecontentslabel、}}
+        {\contentspush{\thecontentslabel\hskip\ccwd\relax}}
         {}{\ustc@leaders\contentspage}
 \else
     \titlecontents{chapter}
