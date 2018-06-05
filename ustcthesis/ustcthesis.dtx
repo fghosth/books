@@ -1154,7 +1154,7 @@ LaTeX version 1999/12/01 or later.
             \node [yshift=-4cm] at (current page.north) [below,align=flush center]%
                 {\parbox{\textwidth}{\raggedleft\fangsong\setfontsize{14\bp@}\ustc@secrettext}};%
         %\vpostext{4cm}{\includegraphics[height=37\bp@]{figures/ustc_logo_text}}%
-        \vpostext{4cm}{\sffamily\bfseries\setfontsize{22\bp@}上海理工大学}%
+        \vpostext{4cm}{\sffamily\bfseries\setfontsize{23pt}上海理工大学}%
         \if@ustc@professional
           \vpostext{6.3cm}{\sffamily\setfontsize{56\bp@}\ziju{-0.09}\ustc@thesisname}%
           \vpostext{9cm}{\setfontsize{26\bp@}\ustc@professionaltype}%
@@ -1162,24 +1162,25 @@ LaTeX version 1999/12/01 or later.
           \vpostext{16.3cm}{\sffamily\bfseries\setfontsize{24\bp@}\ustc@title}%
         \else
 
-          \vpostext{5.4cm}{\sffamily\setfontsize{23\bp@}\ustc@thesisname}%
+          \vpostext{5.2cm}{\sffamily\@setfontsize\normalsize{23pt}{25pt}\ustc@thesisname}%
+%          \vpostext{5.4cm}{\sffamily\setfontsize{23\bp@}\ustc@thesisname}%
           %\vpostext{9.8cm}{\includegraphics[height=4.7cm]{figures/ustc_logo_fig}}%
           \vpostext{10.0cm}{\sffamily\bfseries\setfontsize{22\bp@}[0\bp@]\ustc@title}%
         \fi
         \tikz[remember picture,overlay]%
             \node [xshift=4.6cm,yshift=-12.3cm] at (current page.north west)%
             [below right,align=left] {%
-                \setfontsize{16\bp@}%
+                \@setfontsize\normalsize{15pt}{15pt}%
                 \begin{tabular}{@{}l@{\hspace{\ccwd}}l@{}}%
-                    \textsf{学 \hspace{8mm} 院：} & \ustc@school \\%
-                    \textsf{学 \hspace{8mm} 号：} & \ustc@num \\%
-                    \textsf{姓 \hspace{8mm} 名：} & \ustc@author \\%
-                    \textsf{专 \hspace{8mm} 业：} & \ustc@major \\%
-                    \textsf{学历层次：} & \ustc@level \\%
-                    \textsf{学习形式：} & \ustc@form \\%
-                    \textsf{学习年限：} & \ustc@age \\%
-                    \textsf{学习地点：} & \ustc@site \\%
-                    \textsf{指导老师：} & \ustc@supervisor\quad\ustc@cosupervisor \\ \\%
+                    \textsf{学 \hspace{8mm} 院} & \ustc@school \\%
+                    \textsf{学 \hspace{8mm} 号} & \ustc@num \\%
+                    \textsf{姓 \hspace{8mm} 名} & \ustc@author \\%
+                    \textsf{专 \hspace{8mm} 业} & \ustc@major \\%
+                    \textsf{学历层次} & \ustc@level \\%
+                    \textsf{学习形式} & \ustc@form \\%
+                    \textsf{学习年限} & \ustc@age \\%
+                    \textsf{学习地点} & \ustc@site \\%
+                    \textsf{指导老师} & \ustc@supervisor\quad\ustc@cosupervisor \\ \\ \\ \\%
                     \hspace{8mm} \textsf{完成时间：} & \ustc@date%
                 \end{tabular}};%
     \end{titlepage}}
@@ -1324,7 +1325,7 @@ LaTeX version 1999/12/01 or later.
 % 为了在 PDF 书签中加入目录，重新定义 \cs{tableofcontents}
 %    \begin{macrocode}
 \renewcommand\tableofcontents{%
-    \pagestyle{empty}
+    %\thispagestyle{plain}
     \cleardoublepage%
     \if@ustc@bachelor\pagenumbering{arabic}\fi
     \ustc@chapter{\contentsname}%
@@ -1444,7 +1445,7 @@ LaTeX version 1999/12/01 or later.
 \newdimen\bp@ \bp@=1bp
 \if@ustc@bachelor
   \renewcommand\normalsize{%
-     \@setfontsize\normalsize{12\bp@}{20\bp@}%
+     \@setfontsize\normalsize{12pt}{17pt}%
      \abovedisplayskip 12\bp@ \@plus3\bp@ \@minus7\bp@
      \abovedisplayshortskip \z@ \@plus3\bp@
      \belowdisplayshortskip 6.5\bp@ \@plus3.5\bp@ \@minus3\bp@
