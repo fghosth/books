@@ -166,8 +166,8 @@
 \if@ustc@bachelor
   \fancypagestyle{ustc@headings}{%
     \fancyhf{}%
-    \fancyhead[CE]{\setfontsize{9\bp@}上海理工大学成人高等学历教育毕业设计（论文）}%
-    \fancyhead[CO]{\setfontsize{9\bp@}\ustc@title}%
+    \fancyhead[CO]{\setfontsize{9\bp@}上海理工大学成人高等学历教育毕业设计（论文）}%
+    \fancyhead[CE]{\setfontsize{9\bp@}\ustc@title}%
     \fancyfoot[C]{\setfontsize{9\bp@}\thepage}}%
 \else
   \fancypagestyle{ustc@headings}{%
@@ -405,7 +405,7 @@
           \vpostext{10.0cm}{\sffamily\bfseries\setfontsize{22\bp@}[0\bp@]\ustc@title}%
         \fi
         \tikz[remember picture,overlay]%
-            \node [xshift=4.6cm,yshift=-12.3cm] at (current page.north west)%
+            \node [xshift=6.6cm,yshift=-14cm] at (current page.north west)%
             [below right,align=left] {%
                 \@setfontsize\normalsize{15pt}{15pt}%
                 \begin{tabular}{@{}l@{\hspace{\ccwd}}l@{}}%
@@ -418,7 +418,7 @@
                     \textsf{学习年限} & \ustc@age \\%
                     \textsf{学习地点} & \ustc@site \\%
                     \textsf{指导老师} & \ustc@supervisor\quad\ustc@cosupervisor \\ \\ \\ \\%
-                    \hspace{8mm} \textsf{完成时间：} & \ustc@date%
+                    \hspace{1mm} \textsf{完成时间：} & \ustc@date%
                 \end{tabular}};%
     \end{titlepage}}
 \newcommand\make@entitle{%
